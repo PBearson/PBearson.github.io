@@ -5,6 +5,17 @@ body
 
 }
 
+h2
+{
+    margin-top: 0;
+    margin-bottom: -10px;
+}
+
+hr
+{
+    border: 2px dashed black;
+}
+
 p, ul
 {
     margin-left: 100px;
