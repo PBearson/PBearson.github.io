@@ -2,7 +2,6 @@ body
 {
     background-color: #9df;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
 h2
@@ -21,4 +20,21 @@ p, ul
     margin-left: 100px;
     margin-right: 100px;
     font-size: 18px;
+}
+
+.grid-container
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.grid-item
+{
+    text-align: center;
+}
+
+.headshot-image
+{
+    width: 100px;
 }
