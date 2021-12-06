@@ -4,6 +4,11 @@ body
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a
+{
+    font-size: 18px
+}
+
 h2
 {
     margin-top: 0;

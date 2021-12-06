@@ -46,25 +46,48 @@
     <!-- Keep news to last ~2 years, to prevent clutter. -->
 
     <ul>
+        <li><b>3 Dec. 2021</b>: Our paper, "FUME: Fuzzing Message Queuing Telemetry Transport Brokers", was accepted IEEE INFOCOM 2022! (My first primary-author paper at a top conference!!!)</li>
         <li><b>26 Jan. 2021</b>: Our paper, "On Automating BACnet Device Discovery and Property Identification", was accepted to IEEE ICC 2021!</li>
         <li><b>6 Dec. 2020</b>: Our paper, "Prison Break of Android Reflection Restriction and Defense", was accepted to IEEE INFOCOM 2021!</li>
-        <li><b>22 Sep. 2020</b>: Our paper, "SIC^2: Securing Microcontroller Based IoT Devices with Low-cost Crypto Coprocessors", was accepted to IEEE ICPADS 2020!</li>
-        <li><b>27 Jan. 2020</b>: Our paper, "Secure Deployment of Containerized IoT Systems", was accepted to IEEE SouthEastCon 2020! We will travel to Raleigh, NC in March to present the work.</li>
-        <li><b>5 Dec. 2019</b>: Our paper, "BLESS: A BLE Application Security Scanning Framework", was accepted to IEEE INFOCOM 2020!</li>
-        <li><b>11 Nov. 2019</b>: Our paper, "Microcontroller Based IoT System Firmware Security: Case Studies", won the ICII best paper award! Congratulations, Chao et al!</li>
+        <li><b>22 Sep. 2020</b>: Our paper, "SIC^2: Securing Microcontroller Based IoT Devices with Low-cost Crypto Coprocessors", was accepted to IEEE ICPADS 2020! We presented the work virtually.</li>
+        <li><b>27 Jan. 2020</b>: Our paper, "Secure Deployment of Containerized IoT Systems", was accepted to IEEE SouthEastCon 2020! We presented the work virtually.</li>
     </ul>
 
     <hr/>
 
     <center><h2>Some Projects I've Worked On</h2></center>
 
-    <center><h3>Fuzzing Works</h3></center>
+    <center><h3>FUME: Fuzzing MQTT Brokers</h3></center>
+
+    <p>MQTT is a popular communication protocol used to interconnect devices with considerable network restraints, such as those found in Internet of Things (IoT). MQTT directly impacts thousands of devices, but the software security of its server implementations is not well studied. This project designs, implements, and evaluates a novel fuzz testing model for MQTT. The fuzzer combines aspects of mutation guided fuzzing and generation guided fuzzing to rigorously exhaust the MQTT protocol and identify vulnerabilities in servers. We introduce Markov chains for mutation guided fuzzing and generation guided fuzzing that model the fuzzing engine according to a finite Bernoulli process. We implement "response feedback", a novel technique which monitors network and console activity to learn which inputs trigger new responses from the broker.</p>
+    
+    <p>In total, we found 7 major vulnerabilities across 9 different MQTT implementations, including 6 zero-day vulnerabilities and 2 CVEs. Our experiments demonstrate that when fuzzing these popular MQTT targets, our fuzzer compares favorably with other state-of-the-art fuzzing frameworks, such as BooFuzz and AFLNet.</p>
+
+    <p>This work was accepted to INFOCOM 2022. The source code will be posted soon.</p>
+
+    <br/>
+
+    <center><h3>Review of Fuzzing Works</h3></center>
 
     <p>This is just a collection of the top fuzzing papers in the literature. Currently, it only documents papers from the following conferences: IEEE S&P, ACM CCS, USENIX, and ISOC NDSS. Papers from 2015 and earlier are not included. I have done my best to provide an accurate summary for each paper, which you can think of as an alternative to the paper's abstract. This is still a work-in-progress, and contributions are welcome.</p> 
     
     <p>The repository can be found <a href="https://github.com/PBearson/Fuzzing_Works">here</a>.</p>
 
-    <p> More project updates coming soon...</p>
+    <br/>
+
+    <center><h3>SIC<sup>2</sup>: Securing Microcontroller Based IoT Devices with Low-cost Crypto Coprocessors</h3></center>
+
+    <p>In this paper, we explore the use of microcontrollers (MCUs) and crypto coprocessors to secure IoT applications, and show how developers may implement a low-cost platform that provides protects private keys against software attacks. We first demonstrate the plausibility of format string attacks on the ESP32, a popular MCU from Espressif that uses the Harvard architecture. The format string attacks can be used to remotely steal private keys hard-coded in the firmware. We then present a framework termed SIC 2 (Securing IoT with Crypto Coprocessors), for secure key provisioning that protects end users' private keys from both software attacks and untrustworthy manufacturers. As a proof of concept, we pair the ESP32 with the low-cost ATECC608A cryptographic coprocessor by Microchip and connect to Amazon Web Services (AWS) and Amazon Elastic Container Service (EC2) using a hardware-protected private key, which provides the security features of TLS communication including authentication, encryption and integrity.</p>
+    
+    <p>We have developed a prototype and performed extensive experiments that show that the ATECC608A crypto chip may significantly reduce the TLS handshake time by as much as 82% with the remote server, and it may lower the total energy consumption of the system by up to 70%.
+        
+    <ul>
+        <li><a href="https://github.com/PBearson/ESP32-With-ECC608">Source Code</a></li>
+        <li><a href="docs/ICPADS_2020.pdf">Full Paper</a></li>
+    </ul>
+
+    <p>More project updates coming soon...</p>
+
 </body>
 
 </html>
